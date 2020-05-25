@@ -15,13 +15,35 @@ p {
   margin-top: 0;
 }
 
-.question {
-  border-left: 3px solid lightgray;
-  margin-bottom: 20px;
+.container {
+  max-width: 320px !important;
+  padding: 30px 20px 40px;
+  border: 1px lightgray solid;
+  border-radius: 16px;
+}
+
+.input-group.auto-width {
+  width: auto;
+}
+
+.message {
+  margin-bottom: 20px !important;
+  border-radius: 16px;
   padding: 10px 20px;
-  width: 600px;
+  margin: auto;
+  display: block;
+}
+
+.question {
+  background-color: #b4d8ff;
+  border-bottom-right-radius: 0px;
 }
 
 .answer {
-  background-color: lightgoldenrodyellow;
+  background-color: lightgray;
+  border-bottom-left-radius: 0px;
+}
+
+form.button_to {
+  text-align: center!important;
 }

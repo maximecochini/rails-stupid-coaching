@@ -1,20 +1,18 @@
-<h1>Stupid Coach</h1>
-<div class="question">
-  <p><%= @question %></p>
-  <i>- You</i>
-</div>
+<div class="container game d-flex flex-column ">
+  <h1 class="text-center">Stupid Coach</h1>
 
-<div class="question answer">
-  <p><%=
-if params[:question] == "I am going to work"
-  "Great!"
-elsif params[:question][-1] == ("?")
-  "Silly question, get dressed and go to work!"
-else
-  "I don't care, get dressed and go to work!"
-end
-%></p>
-  <i>- Your coach</i>
-</div>
+  <div class="d-block message question m-4">
+    <p><%= @question.capitalize %></p>
+    <p class="text-right"><i>- You</i></p>
+  </div>
 
-<%= link_to "<- Ask another question", "/ask" %>
+  <div class="d-block message answer m-4">
+    <p><%= @answer %></p>
+    <i>- Your coach</i>
+  </div>
+
+  <%= button_to "Ask another", "/ask",
+  id: "new-question",
+  class: "d-inline-block btn btn-primary",
+  method: :get %>
+</div>
